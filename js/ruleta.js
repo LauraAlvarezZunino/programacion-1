@@ -44,7 +44,18 @@ const youWin = () =>{
   }
 
   //-------------tomo el valor del input y lo paso al div de numero seleccionado ---------------------
-  
+
 inputNumeros.addEventListener("change", ()=>{
     numeroRuleta.textContent = inputNumeros.value; 
+  });
+
+   //-------------tomo el valor del select y le doy el color ---------------------
+  selectColor.addEventListener("change", ()=>{
+    if(selectColor.value === "rojo"){
+      cuadradoNumeroRuleta.classList.add("rojo")
+    }
+     else if(selectColor.value === "negro"){
+      cuadradoNumeroRuleta.classList.add("negro") 
+    }
+  
   });
