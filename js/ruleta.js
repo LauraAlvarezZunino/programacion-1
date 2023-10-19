@@ -25,3 +25,20 @@ const randomNumberFunction = (numero) =>{
       return "negro"
     }
 }
+
+//---------------funcion que avisa que resultado obtuviste-------------------------
+const youWin = () =>{
+    if(randomNumber == inputNumeros.value && randomColor() == selectColor.value){
+      acertasteNumero.style.display = "flex"
+      acertasteColor.style.display = "flex"
+    }
+    else if(randomNumber == inputNumeros.value ){
+      acertasteNumero.style.display = "flex"
+    }
+    else if(randomColor == selectColor.value){
+      acertasteColor.style.display = "flex"
+    }
+    else{
+        console.error("no acertaste") 
+    }
+  }
