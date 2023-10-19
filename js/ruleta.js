@@ -1,4 +1,4 @@
-const botonTirar = document.getElementById("boton-tirar")
+const buttonStart = document.getElementById("boton-tirar")
 const acertasteColor = document.getElementById("acertaste-color")
 const acertasteNumero = document.getElementById("acertaste-numero")
 const cuadradoNumeroRuleta = document.getElementById("div-color-ruleta")
@@ -60,7 +60,7 @@ inputNumeros.addEventListener("change", ()=>{
   
   });
 //------------------ agrego evento para boton tirar-------------------
-  botonTirar.addEventListener("click", ()=>{
+buttonStart.addEventListener("click", ()=>{
     divGanador.style.display = "flex"
     numeroGanador.textContent = randomNumber; 
     randomColor()
