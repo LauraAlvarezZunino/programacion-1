@@ -42,3 +42,9 @@ const youWin = () =>{
         console.error("no acertaste") 
     }
   }
+
+  //-------------tomo el valor del input y lo paso al div de numero seleccionado ---------------------
+  
+inputNumeros.addEventListener("change", ()=>{
+    numeroRuleta.textContent = inputNumeros.value; 
+  });
