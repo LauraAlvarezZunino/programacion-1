@@ -14,3 +14,14 @@ const randomNumberFunction = (numero) =>{
     return Math.floor((Math.random()* numero)+1)
   }
   const randomNumber = randomNumberFunction(37)
+
+  const randomColor = () =>{
+    if(randomNumber % 2 == 0){
+      colorGanador.classList.add("rojo")
+      return "rojo"
+    }
+    else{
+      colorGanador.classList.add("negro")
+      return "negro"
+    }
+}
