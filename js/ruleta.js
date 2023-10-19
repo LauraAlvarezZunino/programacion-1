@@ -59,3 +59,10 @@ inputNumeros.addEventListener("change", ()=>{
     }
   
   });
+//------------------ agrego evento para boton tirar-------------------
+  botonTirar.addEventListener("click", ()=>{
+    divGanador.style.display = "flex"
+    numeroGanador.textContent = randomNumber; 
+    randomColor()
+    youWin()
+  });
