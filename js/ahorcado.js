@@ -1,5 +1,5 @@
 //ahorcado
-const palabrasParaJugar = ["roca","sopa"];
+const palabrasParaJugar = ["protocolos","hardware","computadora","servidor","repositorio","consola","terminal"];
 let palabraRandom = "";
 
 // Tomo del DOM el boton de iniciar
