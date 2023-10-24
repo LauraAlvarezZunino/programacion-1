@@ -198,3 +198,12 @@ const Y = {
     opc3 : "Rusia",
     correcta : "2",
 }
+const preguntas = [ A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y]
+let preguntas_realizadas = []
+let orden_pregunta = Math.floor(Math.random()*preguntas.length)
+
+//Funcion para selección random de la pregunta
+function select_cuestion (lista_preguntas){
+    let pregunta = (lista_preguntas [orden_pregunta])
+    return pregunta
+    }    
