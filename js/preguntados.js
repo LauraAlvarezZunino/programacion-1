@@ -202,8 +202,12 @@ const preguntas = [ A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, 
 let preguntas_realizadas = []
 let orden_pregunta = Math.floor(Math.random()*preguntas.length)
 
-//Funcion para selección random de la pregunta
+//Funcion para selección random de la pregunta y chequear que no haya sido realizada.
 function select_cuestion (lista_preguntas){
-    let pregunta = (lista_preguntas [orden_pregunta])
-    return pregunta
-    }    
+    let pregunta;
+    do {let orden_pregunta = Math.floor(Math.random() * lista_preguntas.length);
+        pregunta = lista_preguntas[orden_pregunta];
+    } while (preguntas_realizadas.includes(pregunta));
+    preguntas_realizadas.push(pregunta);
+    return pregunta;
+    }      
