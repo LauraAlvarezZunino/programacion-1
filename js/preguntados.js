@@ -198,3 +198,62 @@ const Y = {
     opc3 : "Rusia",
     correcta : "2",
 }
+
+const preguntas = [ A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y]
+let preguntas_realizadas = []
+let orden_pregunta = Math.floor(Math.random()*preguntas.length)
+
+//Funcion para selección random de la pregunta y chequear que no haya sido realizada.
+function select_cuestion (lista_preguntas){
+    let pregunta;
+    do {let orden_pregunta = Math.floor(Math.random() * lista_preguntas.length);
+        pregunta = lista_preguntas[orden_pregunta];
+    } while (preguntas_realizadas.includes(pregunta));
+    preguntas_realizadas.push(pregunta);
+    return pregunta;
+    }      
+
+//función para mostrar pregunta random al usuario
+function mostrar_pregunta (objeto_pregunta_seleccionada){
+    let respuesta_usuario = prompt (
+        `${objeto_pregunta_seleccionada.pregunta}
+        1- ${objeto_pregunta_seleccionada.opc1}
+        2- ${objeto_pregunta_seleccionada.opc2}
+        3- ${objeto_pregunta_seleccionada.opc3}`);
+        return respuesta_usuario
+    }
+
+//
+
+//función para verificar si la respuesta de la pregunta fue correcta
+puntaje = 0
+function respuestas_correctas (respuesta_seleccionada, pregunta_actual){
+    if (respuesta_seleccionada == pregunta_actual.correcta) {
+        puntaje ++
+    }
+}    
+
+//funcion para analizar el puntaje total del usuario
+function puntaje_final (puntos_totales) {
+            if (puntos_totales == 5) {
+                alert (`Puntaje Total: ${puntaje}, ERES UN GENIO!!`)
+            } else if ( puntos_totales < 5 && puntos_totales >= 2 ) {
+                alert (`Puntaje Total: ${puntaje}, BUEN TRABAJO!!`)
+            } else {
+                alert (`Puntaje Total: ${puntaje}, PUEDES HACERLO MEJOR!!!`)
+            }
+        }
+
+
+        
+// Función inicial Juego
+function iniciar_juego (){
+    for (let index = 0; index <5 ;index++) {
+        let pregunta_actual = select_cuestion (preguntas)
+        let respuesta_usuario = mostrar_pregunta(pregunta_actual);
+        respuestas_correctas(respuesta_usuario, pregunta_actual);
+    }
+    puntaje_final(puntaje)
+    }
+
+iniciar_juego()
