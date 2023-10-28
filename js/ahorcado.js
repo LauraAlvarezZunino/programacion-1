@@ -1,5 +1,6 @@
 //ahorcado
-const palabrasParaJugar = ["roca","sopa"];
+export ahorcadoInicio = () =>{
+const palabrasParaJugar = ["protocolos","hardware","computadora","servidor","repositorio","consola","terminal"];
 let palabraRandom = "";
 
 // Tomo del DOM el boton de iniciar
@@ -125,3 +126,4 @@ function completarArregloDeGuionesConLetraIngresada(letraIngresada,arrayDePalabr
       }
   }
 
+}
