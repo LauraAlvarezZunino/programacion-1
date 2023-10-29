@@ -1,8 +1,10 @@
 import { ahorcadoInicio } from "./ahorcado.js"
 import {ruletaInicio} from "./ruleta.js"
+// import {iniciarJuego} from "./preguntados.js"
  
 const botonAhorcado = document.getElementById("btn-play") 
 const botonRuleta = document.getElementById("boton-tirar") 
+
 botonAhorcado.addEventListener("click", () => {
     ahorcadoInicio()
 });
