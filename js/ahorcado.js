@@ -1,4 +1,6 @@
 //ahorcado
+export const ahorcadoInicio = () =>{
+
 const palabrasParaJugar = ["protocolos","hardware","computadora","servidor","repositorio","consola","terminal"];
 let palabraRandom = "";
 
@@ -124,4 +126,4 @@ function completarArregloDeGuionesConLetraIngresada(letraIngresada,arrayDePalabr
           alert(`Ganaste !, la palabra era '${palabraSeleccionada}'`,);
       }
   }
-
+}
