@@ -247,7 +247,7 @@ function puntaje_final (puntos_totales) {
 
         
 // Función inicial Juego
-function iniciar_juego (){
+export function iniciarJuego (){
     for (let index = 0; index <5 ;index++) {
         let pregunta_actual = select_cuestion (preguntas)
         let respuesta_usuario = mostrar_pregunta(pregunta_actual);
@@ -256,4 +256,3 @@ function iniciar_juego (){
     puntaje_final(puntaje)
     }
 
-iniciar_juego()
