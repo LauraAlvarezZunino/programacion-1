@@ -1,3 +1,5 @@
+
+export const ruletaInicio = () =>{
 const buttonStart = document.getElementById("boton-tirar")
 const acertasteColor = document.getElementById("acertaste-color")
 const acertasteNumero = document.getElementById("acertaste-numero")
@@ -66,3 +68,4 @@ buttonStart.addEventListener("click", ()=>{
     randomColor()
     youWin()
   });
+}
