@@ -1,4 +1,6 @@
 //Declaro en objetos las preguntas
+export const iniciarPreguntados = () =>{
+
 const A = {
     pregunta : "¿Que tendencia musical es la que mas incursiona en Jamaica?",
     opc1 : "Rock",
@@ -226,7 +228,7 @@ function mostrar_pregunta (objeto_pregunta_seleccionada){
 //
 
 //función para verificar si la respuesta de la pregunta fue correcta
-puntaje = 0
+let puntaje = 0
 function respuestas_correctas (respuesta_seleccionada, pregunta_actual){
     if (respuesta_seleccionada == pregunta_actual.correcta) {
         puntaje ++
@@ -234,7 +236,7 @@ function respuestas_correctas (respuesta_seleccionada, pregunta_actual){
 }    
 
 //funcion para analizar el puntaje total del usuario
-function puntaje_final (puntos_totales) {
+function puntajeFinal (puntos_totales) {
             if (puntos_totales == 5) {
                 alert (`Puntaje Total: ${puntaje}, ERES UN GENIO!!`)
             } else if ( puntos_totales < 5 && puntos_totales >= 2 ) {
@@ -247,12 +249,14 @@ function puntaje_final (puntos_totales) {
 
         
 // Función inicial Juego
-export function iniciarJuego (){
+function iniciarJuego (){
     for (let index = 0; index <5 ;index++) {
         let pregunta_actual = select_cuestion (preguntas)
         let respuesta_usuario = mostrar_pregunta(pregunta_actual);
         respuestas_correctas(respuesta_usuario, pregunta_actual);
     }
-    puntaje_final(puntaje)
+    puntajeFinal(puntaje)
     }
 
+    iniciarJuego ()
+}
