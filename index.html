@@ -7,21 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="container card-container">
+    <section class="container card-container" id="card-container">
         <div class=" card-div">
-            <card class="card">
-                <h4>Ruleta</h4>
-            </card>
+          <a href="#ruleta-container"> 
+                 <card class="card">
+                    <h4>Ruleta</h4>
+                </card>
+            </a> 
+            <a href="#ahorcado-container">
             <card class="card" id="ahorcado-card">
                 <h4>Ahorcado</h4>
                 <img src="./imagenes/ahorcado.jpg" alt="">
             </card>
-            <card class="card">
+             </a>
+             <a href="#preguntados-container">
+            <card class="card" >
                 <h4>Preguntados</h4>
             </card>
+            </a>
         </div>
     </section>
-    <section class="container ruleta-container">
+    <section class="container ruleta-container" id="ruleta-container">
         <div class="ruleta-div">
             <h1>Ruleta</h1>
         <div id="div-elegir-numero">
@@ -53,8 +59,11 @@
         <h1 id="acertaste-numero">Acertaste el número!!</h1>
         <h1 id="acertaste-color">Acertaste el color!!</h1>
     </div>
+             <a href="#card-container">
+                  <button class="boton">Volver a menú</button>
+           </a> 
     </section>
-    <section class="container ahorcado-container">
+    <section class="container ahorcado-container" id="ahorcado-container">
         <div class="ahorcado-div">
             <h1>Ahorcado</h1>
             <h1>Bienvenido al juego del Ahorcado</h1>
@@ -63,12 +72,18 @@
             <h3>Antes de comenzar a jugar abra la consola con las teclas fn +  f12</h3>
             <button id="btn-play">Comenzar Juego</button>
         </div>
+        <a href="#card-container">
+            <button class="boton">Volver a menú</button>
+     </a> 
     </section>
-    <section class="container preguntados-container">
+    <section class="container preguntados-container" id="preguntados-container">
         <div class="preguntados-div">
             <h1>Preguntados</h1>
             <button id="start-preguntados">Iniciar preguntados</button>
         </div>
+        <a href="#card-container">
+            <button class="boton">Volver a menú</button>
+     </a> 
     </section>
 </body>
 <script src="./js/index.js" type="module"></script>
