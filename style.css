@@ -7,6 +7,10 @@
     width: 100vw;
     height: 100vh;
     background-color: #759AAB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     
 }
@@ -16,6 +20,14 @@
     justify-content: space-evenly;
     align-items: center;
 
+}
+.preguntados-container{
+    background-color: #B8C6A6;
+
+}
+.preguntados-div{
+    display:flex ;
+    flex-direction: column;
 }
 .card{
     width: 15vw;
@@ -65,9 +77,13 @@ form{
     justify-content: center;
 }
 button{
-    background-color: #3F2E56;
-    width: 50px;
-    height: 35px;
+    background-color: #5d457c;
+    width: auto;
+    height: auto;
+    color: #93c0d5;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #acertaste-numero{
  display: none;
