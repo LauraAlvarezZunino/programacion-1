@@ -14,7 +14,8 @@
 
     
 }
-.card-div{
+
+#card-div{
     padding-top: 150px;
     display: flex;
     justify-content: space-evenly;
@@ -38,7 +39,9 @@
     flex-direction: column;
     border-radius: 8px;
     padding: 5vh;
-    text-align: center;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    /* text-align: center; */
 }
 img{
     height: auto;
