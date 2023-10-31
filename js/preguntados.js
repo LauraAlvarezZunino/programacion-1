@@ -257,6 +257,8 @@ function iniciarJuego (){
     }
     puntajeFinal(puntaje)
     }
-
-    iniciarJuego ()
+const botonPreguntados= document.getElementById("start-preguntados")
+    botonPreguntados.addEventListener("click", () =>{
+        iniciarJuego ()
+    })
 }
