@@ -1,5 +1,5 @@
 import { ahorcadoInicio } from "./ahorcado.js"
-import {ruletaInicio} from "./ruleta.js"
+import {jugarRuleta , reset} from "./ruleta.js"
 import {iniciarPreguntados} from "./preguntados.js"
  
 const botonJugarAhorcado = document.getElementById("start-ahorcado-btn") 
@@ -11,10 +11,17 @@ botonJugarAhorcado.addEventListener("click", () => {
     ahorcadoInicio()
 });
 botonJugarRuleta.addEventListener("click", () => {
-    ruletaInicio()
+    reset()
 });
 
 botonJugarPreguntados.addEventListener("click", () =>{
     iniciarPreguntados()
 })
-
+const buttonReset = document.getElementById("boton-reset")
+buttonReset.addEventListener("click", ()=>{
+    reset()
+})
+const buttonStart = document.getElementById("boton-tirar")
+buttonStart.addEventListener("click", ()=>{
+    jugarRuleta ()
+  });
