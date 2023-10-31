@@ -99,6 +99,26 @@ button{
     border-radius: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+input{
+    background-color: #9790a0;
+    width: auto;
+    height: auto;
+    color: #02141c;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+select{
+    background-color: #9790a0;
+    width: auto;
+    height: auto;
+    color: #02141c;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 #acertaste-numero{
  display: none;
 }
@@ -113,8 +133,11 @@ button{
 }
 
 .show{
-    display: block;
+    display: flex;
 }
 .hidden{
     display: none;
+}
+.neutra{
+    background-color: #FAF2A1;;
 }

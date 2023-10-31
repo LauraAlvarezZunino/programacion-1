@@ -17,3 +17,4 @@ botonJugarRuleta.addEventListener("click", () => {
 botonJugarPreguntados.addEventListener("click", () =>{
     iniciarPreguntados()
 })
+
