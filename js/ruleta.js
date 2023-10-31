@@ -3,6 +3,7 @@ export const ruletaInicio = () =>{
 const buttonStart = document.getElementById("boton-tirar")
 const buttonReset = document.getElementById("boton-reset")
 const acertasteColor = document.getElementById("acertaste-color")
+const noAcertaste = document.getElementById("no-acertaste")
 const acertasteNumero = document.getElementById("acertaste-numero")
 const cuadradoNumeroRuleta = document.getElementById("div-color-ruleta")
 const inputNumeros = document.getElementById("input-numeros")
@@ -11,13 +12,11 @@ const numeroRuleta = document.getElementById("numero-ruleta-elegido")
 const numeroGanador = document.getElementById("numero-ganador")
 const colorGanador = document.getElementById("div-color-ganador")
 const divGanador = document.getElementById("div-ganador")
-
+"no-acertaste"
 //---------------color y numeros random-------------------------
 const randomNumberFunction = (numero) =>{
     return Math.floor((Math.random()* numero)+1)
   }
-  
-  const randomNumber = randomNumberFunction(37)
 
   const randomColor = () =>{
     if(randomNumber % 2 == 0){
@@ -29,30 +28,29 @@ const randomNumberFunction = (numero) =>{
       return "negro"
     }
 }
+const randomNumber = randomNumberFunction(37)
+  const randomColorVar = randomColor()
 
+
+console.log("random Number", randomNumber);
+console.log("random Color", randomColorVar);
 //---------------funcion que avisa que resultado obtuviste-------------------------
 const youWin = () =>{
-  console.log("random Number", randomNumber);
-  console.log("input numeros", inputNumeros.value);
-  console.log("select color", selectColor.value);
-  console.log("random color", randomColor());
-    if(randomNumber === inputNumeros.value && randomColor() === selectColor.value){
-      acertasteNumero.style.display = "flex"
+  // console.log("random Number", randomNumber);
+  // console.log("input numeros", inputNumeros.value);
+  // console.log("select color", selectColor.value);
+  // console.log("random color", randomColorVar);
+
+  if(randomNumber == inputNumeros.value){
+    acertasteNumero.style.display = "flex"
+      console.log("Acertaste Numero")
+    }
+    if(randomColorVar == selectColor.value){
       acertasteColor.style.display = "flex"
-      console.log("youWin")
+       console.log("Acertaste Color")
     }
 
-   if(randomNumber === inputNumeros.value ){
-      acertasteNumero.style.display = "flex"
-      console.log("youWin solo numero")
-    }
-    if(randomColor === selectColor.value){
-      acertasteColor.style.display = "flex"
-      console.log("youWin solo color")
-    }
-    // else{
-    //     console.error("no acertaste") 
-    // }
+   
   }
 
   //-------------tomo el valor del input y lo paso al div de numero seleccionado ---------------------
@@ -80,9 +78,11 @@ buttonStart.addEventListener("click", ()=>{
     randomColor()
     youWin()
   });
-  buttonReset.addEventListener("click", ()=>{
-    numeroGanador.innerHTML= ""; 
-    selectColor.value = "valor"
-    divGanador.style.display = "none"
-  })
+  // buttonReset.addEventListener("click", ()=>{
+  //   numeroGanador.innerHTML= randomNumberFunction(37)
+  //   numeroRuleta.innerHTML= 0
+  //   selectColor.value = "valor"
+  //   inputNumeros.value = 0
+    
+  // })
 }
