@@ -1,9 +1,4 @@
-
-export const ruletaInicio = () =>{
-const buttonStart = document.getElementById("boton-tirar")
-const buttonReset = document.getElementById("boton-reset")
 const acertasteColor = document.getElementById("acertaste-color")
-const noAcertaste = document.getElementById("no-acertaste")
 const acertasteNumero = document.getElementById("acertaste-numero")
 const cuadradoNumeroRuleta = document.getElementById("div-color-ruleta")
 const inputNumeros = document.getElementById("input-numeros")
@@ -29,28 +24,16 @@ const randomNumberFunction = (numero) =>{
     }
 }
 const randomNumber = randomNumberFunction(37)
-  const randomColorVar = randomColor()
-
-
-console.log("random Number", randomNumber);
-console.log("random Color", randomColorVar);
+const randomColorVar = randomColor()
 //---------------funcion que avisa que resultado obtuviste-------------------------
 const youWin = () =>{
-  // console.log("random Number", randomNumber);
-  // console.log("input numeros", inputNumeros.value);
-  // console.log("select color", selectColor.value);
-  // console.log("random color", randomColorVar);
 
   if(randomNumber == inputNumeros.value){
     acertasteNumero.style.display = "flex"
-      console.log("Acertaste Numero")
     }
     if(randomColorVar == selectColor.value){
       acertasteColor.style.display = "flex"
-       console.log("Acertaste Color")
     }
-
-   
   }
 
   //-------------tomo el valor del input y lo paso al div de numero seleccionado ---------------------
@@ -72,17 +55,26 @@ inputNumeros.addEventListener("change", ()=>{
   
   });
 //------------------ agrego evento para boton tirar-------------------
-buttonStart.addEventListener("click", ()=>{
-    divGanador.style.display = "flex"
-    numeroGanador.textContent = randomNumber; 
-    randomColor()
-    youWin()
-  });
-  // buttonReset.addEventListener("click", ()=>{
-  //   numeroGanador.innerHTML= randomNumberFunction(37)
-  //   numeroRuleta.innerHTML= 0
-  //   selectColor.value = "valor"
-  //   inputNumeros.value = 0
-    
-  // })
+
+
+export const jugarRuleta = () =>{
+  divGanador.style.display = "flex"
+  numeroGanador.innerHTML= randomNumber; 
+  randomColor()
+  youWin()
+}
+const resetElegirNumero = () =>{
+  numeroRuleta.innerHTML= 0
+  selectColor.value = "valor"
+  inputNumeros.value = 0
+}
+const resetDesaparecer = () =>{
+  divGanador.style.display= "none"
+  acertasteNumero.style.display ="none"
+  acertasteColor.style.display ="none"
+}
+
+export const reset = () =>{
+resetElegirNumero()
+resetDesaparecer()
 }
