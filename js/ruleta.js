@@ -12,7 +12,7 @@ const numeroRuleta = document.getElementById("numero-ruleta-elegido")
 const numeroGanador = document.getElementById("numero-ganador")
 const colorGanador = document.getElementById("div-color-ganador")
 const divGanador = document.getElementById("div-ganador")
-"no-acertaste"
+
 //---------------color y numeros random-------------------------
 const randomNumberFunction = (numero) =>{
     return Math.floor((Math.random()* numero)+1)
