@@ -8,28 +8,34 @@
 </head>
 <body>
     <section class="container card-container" id="card-container">
-        <div class=" card-div">
+        <div class=" card-div" id="card-div">
           <a href="#ruleta-container"> 
+
                  <card class="card">
-                    <h4>Ruleta</h4>
+                    <h2>Ruleta</h2>
+                    <img src="./imagenes/Ruleta.jpeg" alt="">
                 </card>
+                <button id="start-ruleta-btn">Jugar ruleta</button>
             </a> 
             <a href="#ahorcado-container">
             <card class="card" id="ahorcado-card">
-                <h4>Ahorcado</h4>
-                <img src="./imagenes/ahorcado.jpg" alt="">
+                <h2>Ahorcado</h2>
+                <img src="./imagenes/ahorcado-2.png" alt="">
             </card>
              </a>
              <a href="#preguntados-container">
             <card class="card" >
-                <h4>Preguntados</h4>
+                <h2>Preguntados</h2>
+                <img src="./imagenes/preguntados.jpeg" alt="">
             </card>
             </a>
         </div>
+        <h2>Intrucciones de Juego</h2>
+        <h3>Antes de comenzar a jugar abra la consola con las teclas fn +  f12</h3>
     </section>
     <section class="container ruleta-container" id="ruleta-container">
-        <div class="ruleta-div">
-            <h1>Ruleta</h1>
+        <h1>Ruleta</h1>
+        <div class="ruleta-div">         
         <div id="div-elegir-numero">
             <div id="div-color-ruleta"class="div-numero-ruleta">
                 <h1 id="numero-ruleta-elegido">0</h1>
@@ -55,35 +61,35 @@
             </div>
         </div>
         </div>
-        <div class="div-ganaste">
+        <div class="hidden">
         <h1 id="acertaste-numero">Acertaste el número!!</h1>
         <h1 id="acertaste-color">Acertaste el color!!</h1>
-    </div>
+        </div>
              <a href="#card-container">
                   <button class="boton">Volver a menú</button>
            </a> 
     </section>
     <section class="container ahorcado-container" id="ahorcado-container">
-        <div class="ahorcado-div">
-            <h1>Ahorcado</h1>
-            <h1>Bienvenido al juego del Ahorcado</h1>
+        <h1>Ahorcado</h1>
+        <div class="ahorcado-div"> 
             <img src="./imagenes/ahorcado.jpg" alt="ahorcado">
-            <h2>Intrucciones de Juego</h2>
-            <h3>Antes de comenzar a jugar abra la consola con las teclas fn +  f12</h3>
-            <button id="btn-play">Comenzar Juego</button>
-        </div>
+     </div>
+     <button id="btn-play">Comenzar Juego</button>
         <a href="#card-container">
             <button class="boton">Volver a menú</button>
      </a> 
     </section>
     <section class="container preguntados-container" id="preguntados-container">
+        <h1>Preguntados</h1>
         <div class="preguntados-div">
-            <h1>Preguntados</h1>
+         <img src="./imagenes/preguntados.jpeg" alt="">
+         </div>
             <button id="start-preguntados">Iniciar preguntados</button>
-        </div>
-        <a href="#card-container">
-            <button class="boton">Volver a menú</button>
-     </a> 
+            <a href="#card-container">
+                <button class="boton">Volver a menú</button>
+            </a> 
+      
+      
     </section>
 </body>
 <script src="./js/index.js" type="module"></script>
