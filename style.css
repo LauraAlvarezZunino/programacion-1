@@ -111,3 +111,10 @@ button{
 .negro{
      background-color: black;
 }
+
+.show{
+    display: block;
+}
+.hidden{
+    display: none;
+}
