@@ -125,6 +125,9 @@ select{
 #acertaste-color{
     display: none;
 }
+#no-acertaste{
+    display: none;
+}
 .rojo{
     background-color: red;
 }
